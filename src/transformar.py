@@ -8,7 +8,7 @@ def transformar_em_jpeg(caminho_img=''):
     return img
 
 
-def imagem_cinza(caminho_img=''):
+def transformar_img_cinza(caminho_img=''):
     img = io.read_file(filename=caminho_img)
     img = io.decode_jpeg(contents=img, channels=3)
     img = image.rgb_to_grayscale(images=img)
@@ -16,7 +16,7 @@ def imagem_cinza(caminho_img=''):
     return img
 
 
-def imagem_vertical(caminho_img=''):
+def transformar_img_vertical(caminho_img=''):
     img_transformada = io.read_file(filename=caminho_img)
     img_transformada = io.decode_jpeg(contents=img_transformada, channels=3)
     img_transformada = image.flip_left_right(img_transformada)
